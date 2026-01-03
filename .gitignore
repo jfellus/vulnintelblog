@@ -1,0 +1,9 @@
+# Don't version large VM images
+*.qcow2
+*.ova
+
+# JS
+**/node_modules/
+
+# Build site
+_site/

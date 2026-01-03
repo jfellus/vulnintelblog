@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: A useless blog about 3 vulns...
+---
+<section class="hero">
+  <h1>A useless blog about 3 vulns</h1>
+  <p class="tagline">Three vulnerabilities disclosed in late 2025 that are worth identifying and patching on your exposed surface</p>
+</section>
+<section>
+  <h2>Hot vulnerabilities</h2>
+  <ul class="post-list">
+    {% for post in collections.post | reverse %}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        <span class="date">{{ post.date | date("yyyy-LL-dd") }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
